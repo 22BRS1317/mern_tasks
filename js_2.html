@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse Sting</title>
+</head>
+<body>
+  <h1>Reverse String</h1>
+  <input type="text" id="input">
+  <button onclick="reverse()">Reverse</button>
+  <p id="result"></p>
+
+  <script>
+    function alphabetizeString(str) {
+      return str.split('').sort().join('');
+    }
+
+    function reverse() {
+      let inputStr = document.getElementById("input").value;
+      let alphabetizedStr = alphabetizeString(inputStr);
+      document.getElementById("result").innerHTML = "Reversed string: " + alphabetizedStr;
+    }
+  </script>
+</body>
+</html>

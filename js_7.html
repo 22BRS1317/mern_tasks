@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moving Ball Animation</title>
+  <style>
+    .animated-ball {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color:black;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      animation: move-ball 5s linear infinite;
+    }
+
+    @keyframes move-ball {
+      from {
+        transform: translateX(0px);
+      }
+      to {
+        transform: translateX(100vw);
+      }
+    }
+    button {
+            background-color: #3877e5;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2860b0;
+        }
+  </style>
+</head>
+<body>
+  <div class="animated-ball"></div>
+  <center>
+  <br>
+  <h1>This is the animated ball moving from left to right opearates with the buttons</h1>
+  <br>
+    <button id="start-button">Start</button>
+    <button id="stop-button">Stop</button>
+  </center>
+  <script>
+    const animatedBall = document.querySelector('.animated-ball');
+    const startButton = document.getElementById('start-button');
+    const stopButton = document.getElementById('stop-button');
+
+    let isAnimationRunning = false;
+
+    startButton.addEventListener('click', () => {
+      if (!isAnimationRunning) {
+        animatedBall.style.animationPlayState = 'running';
+        isAnimationRunning = true;
+      }
+    });
+
+    stopButton.addEventListener('click', () => {
+      if (isAnimationRunning) {
+        animatedBall.style.animationPlayState = 'paused';
+        isAnimationRunning = false;
+      }
+    });
+  </script>
+</body>
+</html>

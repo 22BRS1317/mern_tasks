@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing Table</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    .pricing-header {
+      text-align: center;
+      padding: 3rem 0;
+    }
+    .card {
+      border: none;
+      border-radius: 10px;
+      transition: all .2s ease-in-out;
+      box-shadow: 0px 4px 10px rgba(0,0,0,.15);
+    }
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0px 6px 20px rgba(0,0,0,.2);
+    }
+    .card-header {
+      background-color: #fff;
+      border-bottom: none;
+    }
+    .card-pricing {
+      text-align: center;
+      color: #007bff;
+    }
+    .list-unstyled li {
+      padding: .5rem 0;
+    }
+    .btn-outline-primary {
+      color: #007bff;
+      border-color: #007bff;
+    }
+
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="pricing-header py-5 text-center">
+    <h1>Pricing</h1>
+    <p class="">Quickly build an effective pricing table for your potential customers with this Bootstrap example.</p>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="card mb-5 mb-lg-0">
+        <div class="card-header">
+          <h5 class="card-title text-muted text-uppercase text-center">Free</h5>
+        </div>
+        <div class="card-body">
+          <h6 class="card-price text-center">$0<span class="period">/month</span></h6>
+          <hr>
+          <ul class="list-unstyled mt-3 mb-4">
+            <li>10 users included</li>
+            <li>2 GB of storage</li>
+            <li>Email support</li>
+            <li>Help center access</li>
+          </ul>
+          <button type="button" class="btn btn-outline-primary btn-block">Sign up for free</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="card mb-5 mb-lg-0">
+          <div class="card-header">
+            <h5 class="card-title text-muted text-uppercase text-center">Pro</h5>
+          </div>
+          <div class="card-body">
+            <h6 class="card-price text-center">$15<span class="period">/month</span></h6>
+            <hr>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>20 users included</li>
+              <li>10 GB of storage</li>
+              <li>Priority emial support</li>
+              <li>Help center access</li>
+            </ul>
+            <button type="button" class="btn btn-outline-primary btn-block">Get started</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="card mb-5 mb-lg-0">
+          <div class="card-header">
+            <h5 class="card-title text-muted text-uppercase text-center">Enterprise</h5>
+          </div>
+          <div class="card-body">
+            <h6 class="card-price text-center">$29<span class="period">/month</span></h6>
+            <hr>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>30 users included</li>
+              <li>15 GB of storage</li>
+              <li>Phone and Email support</li>
+              <li>Help center access</li>
+            </ul>
+            <button type="button" class="btn btn-outline-primary btn-block">Get started</button>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+</body>
+</html>

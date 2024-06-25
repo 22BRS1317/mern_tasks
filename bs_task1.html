@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ethnus Layout</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f9f9f9;
+    }
+    .header {
+      background-color: #007bff;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 1px solid #00698f;
+    }
+    .navbar {
+      background-color: #fff;
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+    .navbar-brand {
+      font-weight: bold;
+      color: #333;
+    }
+    .nav-link {
+      color: #333;
+      transition: color 0.2s ease;
+    }
+    .nav-link:hover {
+      color: #00698f;
+    }
+    .main-content {
+      background-color: #fff;
+      padding: 30px;
+      border-left: 1px solid #ddd;
+    }
+    .sidebar {
+      background-color: #696969;
+      padding: 20px;
+      height: 100vh;
+      border-left: 2px solid #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Ethnus layout</h1>
+  </div>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Ethnus</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">HOME <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">MENU</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">ABOUT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">CONTACT</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#">SIGNUP</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">LOGIN</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-10 main-content">
+        <p>This web front end page uses html,css,bs and this is a basic page and the links will go no where</p>
+      </div>
+      <div class="col-md-2 sidebar">
+        This is basic web page made for ethnus by Chakri
+      </div>
+    </div>
+    </div>
+</body>
+</html>

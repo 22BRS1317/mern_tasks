@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 50%;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        .form-group input[type="checkbox"] {
+            width: auto;
+        }
+        .form-group .error {
+            color: red;
+            font-size: 0.9em;
+        }
+        .form-group .success {
+            color: green;
+            font-size: 0.9em;
+        }
+        .form-group .gender {
+            display: inline-block;
+            margin-right: 10px;
+        }
+        .form-group .languages {
+            display: inline-block;
+            margin-right: 10px;
+        }
+        .form-group .declaration {
+            margin-top: 20px;
+        }
+        .form-group button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .form-group button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Registration Form</h2>
+        <form id="registrationForm">
+            <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName">
+                <span class="error" id="firstNameError">POOR</span>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="lastName">
+                <span class="error" id="lastNameError">POOR</span>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email">
+                <span class="error" id="emailError">POOR</span>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password">
+                <span class="error" id="passwordError">POOR</span>
+            </div>
+            <div class="form-group">
+                <label for="rePassword">Re-enter Password</label>
+                <input type="password" id="rePassword" name="rePassword">
+                <span class="error" id="rePasswordError">POOR OR MISMATCH</span>
+            </div>
+            <div class="form-group">
+                <label>Gender</label>
+                <div class="gender">
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label>
+                </div>
+                <div class="gender">
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="number" id="age" name="age">
+            </div>
+            <div class="form-group">
+                <label for="phoneNumber">Phone Number</label>
+                <input type="tel" id="phoneNumber" name="phoneNumber">
+            </div>
+            <div class="form-group">
+                <label for="address">Address</label>
+                <input type="text" id="address" name="address">
+            </div>
+            <div class="form-group">
+                <label for="country">Country</label>
+                <select id="country" name="country">
+                    <option value="India">India</option>
+                    <option value="USA">USA</option>
+                    <option value="UK">UK</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Languages Known</label>
+                <div class="languages">
+                    <input type="checkbox" id="telugu" name="languages" value="telugu">
+                    <label for="telugu">Telugu</label>
+                </div>
+                <div class="languages">
+                    <input type="checkbox" id="hindi" name="languages" value="hindi">
+                    <label for="hindi">Hindi</label>
+                </div>
+                <div class="languages">
+                    <input type="checkbox" id="kannada" name="languages" value="kannada">
+                    <label for="kannada">Kannada</label>
+                </div>
+            </div>
+            <div class="form-group declaration">
+                <input type="checkbox" id="declaration" name="declaration">
+                <label for="declaration">Hereby I declare all the given details are true to my knowledge</label>
+            </div>
+            <div class="form-group">
+                <button type="submit">REGISTER</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var isValid = true;
+
+            var firstName = document.getElementById('firstName').value;
+            if (firstName.length <= 3) {
+                document.getElementById('firstNameError').style.display = 'inline';
+                isValid = false;
+            } else {
+                document.getElementById('firstNameError').style.display = 'none';
+            }
+
+            var lastName = document.getElementById('lastName').value;
+            if (lastName.length <= 3) {
+                document.getElementById('lastNameError').style.display = 'inline';
+                isValid = false;
+            } else {
+                document.getElementById('lastNameError').style.display = 'none';
+            }
+
+            var email = document.getElementById('email').value;
+            if (email.length <= 3) {
+                document.getElementById('emailError').style.display = 'inline';
+                isValid = false;
+            } else {
+                document.getElementById('emailError').style.display = 'none';
+            }
+
+            var password = document.getElementById('password').value;
+            if (password.length <= 3) {
+                document.getElementById('passwordError').style.display = 'inline';
+                isValid = false;
+            } else {
+                document.getElementById('passwordError').style.display = 'none';
+            }
+
+            var rePassword = document.getElementById('rePassword').value;
+            if (rePassword.length <= 3 || rePassword !== password) {
+                document.getElementById('rePasswordError').style.display = 'inline';
+                isValid = false;
+            } else {
+                document.getElementById('rePasswordError').style.display = 'none';
+            }
+
+            if (isValid) {
+                alert('Form submitted successfully!');
+            }
+        });
+    </script>
+</body>
+</html>

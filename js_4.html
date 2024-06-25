@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date & Time</title>
+</head>
+<body>
+    <p>Today's date: <span id="date"></span></p>
+    <p>Current time: <span id="time"></span></p>
+    <button onclick="updateDate()">Update Date</button>
+    <button onclick="updateTime()">Update Time</button>
+    <script>
+        function updateDate() {
+            var today = new Date();
+            var formattedDate = today.toLocaleDateString();
+            document.getElementById("date").textContent = formattedDate;
+        }
+
+        function updateTime() {
+            var today = new Date();
+            var formattedTime = today.toLocaleTimeString();
+            document.getElementById("time").textContent = formattedTime;
+        }
+    </script>
+</body>
+</html>
